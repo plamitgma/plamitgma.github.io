@@ -57,5 +57,4 @@ gulp.task('build-clean', function () {
         .pipe(clean());
 });
 
-
 gulp.task('default', gulpSequence('build-clean', 'less', ['build-js-css', 'build-html', 'build-fonts'], ['move-templateCache']));
