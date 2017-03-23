@@ -2,19 +2,40 @@
 <html>
 
 <head>
-    <title>E27</title>
+    <title>Lam Phan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/combined.css">
+    <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- endbuild -->
 </head>
 
 <body ng-app="main">
     <div ng-include src="'src/views/common/header.html'"></div>
     <div class="container" ng-view></div>
 </body>
-<script src="scripts/app.lib.js"></script>
+<!-- build:js scripts/app.lib.js -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+<script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+<!-- endbuild -->
 
-<script src="scripts/app.main.js"></script>
+<!-- build:js scripts/app.main.js -->
+<script src="src/js/main.js"></script>
+<script src="src/views/setting/settingController.js"></script>
+<script src="src/views/home/homeController.js"></script>
+<script src="src/services/settingService.js"></script>
+<script src="src/directives/input-control.js"></script>
+<script src="src/directives/select-box-control.js"></script>
+<!-- endbuild -->
 
-<script src="scripts/templates.min.js"></script>
 </html>

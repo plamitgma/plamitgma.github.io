@@ -1,0 +1,10 @@
+<tags-input class="tag-input-custom" ng-if="type == 6 || type == 8" ng-model="dataModel" placeholder="Select a country" replace-spaces-with-dashes="false"
+    add-from-autocomplete-only="true">
+    <auto-complete source="loadData($query)" min-length="0" debounce-delay="0" max-results-to-show="10"></auto-complete>
+</tags-input>
+<tags-input class="tag-input-custom" id="select-box-control-{{time}}" ng-if="type == 5 || type == 7" ng-model="dataModel" placeholder="Select a country" replace-spaces-with-dashes="false"
+    add-from-autocomplete-only="true" max-tags="1"
+                on-tag-added="tagAdded()"
+                on-tag-removed="tagRemoved()">
+    <auto-complete source="loadData($query)" min-length="0" debounce-delay="0" max-results-to-show="10"></auto-complete>
+</tags-input>

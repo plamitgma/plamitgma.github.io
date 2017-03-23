@@ -1,0 +1,229 @@
+<div class="container">
+    <div class="row">
+        <div id="setting-left-panel" class="col-xs-12 col-sm-12 col-md-9">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3>MAIN SECTION</h3>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="text" class="form-control" placeholder="Section Name" ng-model="vm.mainSection.sectionDescription" />
+                </div>
+            </div>
+            <!--Require fields-->
+            <div class="row border-field">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <input type="text" class="form-control" placeholder="Field Name" value="Name" disabled>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <input type="text" class="form-control" placeholder="Type" value="Textbox" disabled>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                    <select class="form-control" ng-model="vm.mainSection.name.required" ng-options="item.value as item.name for item in vm.requireSelection"
+                        disabled>
+                    </select>
+                </div>
+            </div>
+            <div class="row border-field">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <input type="text" class="form-control" placeholder="Field Name" ng-model="vm.mainSection.email.name" disabled>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <input type="text" class="form-control" placeholder="Type" ng-model="vm.mainSection.email.type" disabled>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                    <select class="form-control" ng-model="vm.mainSection.email.required" ng-options="item.value as item.name for item in vm.requireSelection"
+                        disabled>
+                    </select>
+                </div>
+            </div>
+            <!--Optional fields-->
+            <div id="main-section-fields" class="row">
+                <div class="col-xs-12" dnd-list="vm.mainSection.fields">
+                    <div class="row section-control" ng-class="{'border-field': field.dataType === 'Normal', 'border-pre-built-field': field.dataType !== 'Normal'}"
+                        ng-repeat="field in vm.mainSection.fields" dnd-draggable="field" dnd-moved="vm.mainSection.fields.splice($index, 1)"
+                        dnd-effect-allowed="move">
+                        <dnd-nodrag>
+                            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                <div class="input-group">
+                                    <div class="input-group-addon main-section-field" dnd-handle>:::</div>
+                                    <input type="text" class="form-control" placeholder="Field Name" ng-model="field.name">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <select class="form-control" ng-model="field.type" ng-options="item.id as item.name for item in vm.inputList | filter: field.dataType"></select>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <select class="form-control" ng-model="field.required" ng-options="item.value as item.name for item in vm.requireSelection">
+                                    </select>
+                            </div>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                <button ng-click="vm.deleteSectionField($parent.$index, $index, true)" class="btn btn-link">
+                                    <i class="glyphicon glyphicon-trash objective-child-item-icon" rel="tooltip" title="Delete?"></i>
+                                </button>
+                            </div>
+                        </dnd-nodrag>
+                    </div>
+                </div>
+            </div>
+            <!--Render Objective -->
+            <div class="row border-field">
+                <div class="col-xs-12">
+                    <div id="objective-section" class="row">
+                        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <input type="text" class="form-control" placeholder="Field Name" ng-model="vm.mainSection.objective.name" disabled>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Type" ng-model="vm.mainSection.objective.type" disabled>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <select class="form-control" ng-model="vm.mainSection.objective.required" ng-options="item.value as item.name for item in vm.requireSelection">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row objective-child-item" ng-repeat="objective in vm.mainSection.objective.options">
+                        <div class="col-xs-1 col-sm-1">
+                            <i class="fa fa-circle pull-right objective-child-item-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 col-sm-5">
+                            <input class="form-control" type="text" ng-model="objective.name" />
+                        </div>
+                        <div class="col-xs-11 col-sm-5">
+                            <select class="form-control" ng-model="objective.section" ng-options="item.id as 'Add section: ' + item.name for item in vm.sections">
+                    </select>
+                        </div>
+                        <div class="col-xs-1 col-sm-1">
+                            <button ng-click="vm.removeObjectiveOption($index)" class="btn btn-link">
+                        <i class="glyphicon glyphicon-trash objective-child-item-icon" rel="tooltip" title="Delete?"></i>
+                    </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <i class="fa fa-plus pull-right objective-child-item-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-11 ">
+                            <button ng-click="vm.addObjectiveOption()" class="btn btn-link">
+                        <span>Add new choice</span>
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <button ng-click="vm.addNewField(null, true)" class="btn btn-link">
+                        <span>Add new field</span>
+                    </button>
+
+                </div>
+            </div>
+            <!--Render Section-->
+            <div id="SectionRenderControl" class="row">
+                <div class="col-xs-12">
+                    <div class="row" ng-repeat="section in vm.sections">
+                        <div class="col-xs-12">
+                            <div class="row section-description">
+                                <div class="col-xs-11">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">{{$index + 1}}.</div>
+                                        <input type="text" class="form-control" ng-model="section.name" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <button type="button" class="close" ng-click="vm.deleteSection($index)" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12" dnd-list="section.fields">
+                                    <div class="row section-control" ng-class="{'border-field': field.dataType === 'Normal', 'border-pre-built-field': field.dataType !== 'Normal'}"
+                                        ng-repeat="field in section.fields" dnd-draggable="field" dnd-moved="section.fields.splice($index, 1)"
+                                        dnd-effect-allowed="move">
+                                        <dnd-nodrag>
+                                            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon main-section-field" dnd-handle>:::</div>
+                                                    <input type="text" class="form-control" placeholder="Field Name" ng-model="field.name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <select class="form-control" ng-model="field.type" ng-options="item.id as item.name for item in vm.inputList | filter: field.dataType">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                                <select class="form-control" ng-model="field.required" ng-options="item.value as item.name for item in vm.requireSelection">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                                <button ng-click="vm.deleteSectionField($parent.$index, $index)" class="btn btn-link">
+                                                    <i class="glyphicon glyphicon-trash objective-child-item-icon" rel="tooltip" title="Delete?"></i>
+                                                </button>
+                                            </div>
+                                        </dnd-nodrag>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <i class="fa fa-plus pull-right objective-child-item-icon" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-xs-11 ">
+                                    <button id="section-btn-{{section.id}}" ng-click="vm.addNewField($index)" class="btn btn-link">
+                                        <span>Add new field</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="row">
+                <div class="col-xs-12 section-panel">
+                    <h3>SECTIONS</h3>
+                    <p>Main Section</p>
+                    <p ng-repeat="section in vm.sections">{{$index +1}}. {{section.name}}</p>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label>{{vm.sections.length + 1}}.</label>
+                            <input type="text" class="form-control" placeholder="New Section" ng-model="vm.newSectionValue">
+                            <button type="button" class="btn btn-default" ng-click="vm.addSection()">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 section-pre-built-field">
+                    <h3>Pre-built Fields</h3>
+                    <div dnd-draggable="vm.getItemDrag('Country')" dnd-effect-allowed="copy" draggable="true">
+                        <p>Country</p>
+                    </div>
+                    <div dnd-draggable="vm.getItemDrag('Industry Vertical')" dnd-effect-allowed="copy" draggable="true">
+                        <p>Industry Vertical</p>
+                    </div>
+                    <div dnd-draggable="vm.getItemDrag('Round of Funding')" dnd-effect-allowed="copy" draggable="true">
+                        <p>Round of Funding</p>
+                    </div>
+                    <div dnd-draggable="vm.getItemDrag('Amount Raised')" dnd-effect-allowed="copy" draggable="true">
+                        <p>Amount Raised</p>
+                    </div>
+                    <div dnd-draggable="vm.getItemDrag('Amount to Raise')" dnd-effect-allowed="copy" draggable="true">
+                        <p>Amount to Raise</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-9">
+                    <button type="button" class="btn btn-primary form-control" ng-click="vm.saveAll()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="loader-wrapper" ng-show="sections.mainSection == null">
+    <div id="loader"></div>
+</div>

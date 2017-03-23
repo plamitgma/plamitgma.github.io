@@ -1,0 +1,27 @@
+{
+  "name": "Lam",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lam Phan <lam.phan@identifix.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.9",
+    "angular-animate": "1.5.9",
+    "bootstrap": "^3.3.7",
+    "angular-route": "1.5.9",
+    "ng-tags-input": "^3.1.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular-drag-and-drop-lists": "^1.4.0",
+    "angularfire": "^2.1.0"
+  }
+}
