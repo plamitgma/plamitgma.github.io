@@ -1,0 +1,190 @@
+body {
+    font-family: "Calisto MT";
+}
+
+.header {
+    padding: 40px 20px;
+    overflow: hidden;
+    background: #a3a39a;
+    color: #ffffff;
+}
+
+.header h2 {
+    font-family: fantasy;
+    color: #363e96;
+}
+
+.header h4 {
+    font-family: cursive;
+}
+
+.header label {
+    font-family: cursive;    
+}
+
+.icon-header{
+    font-size: 2em;
+    margin-right: 15px
+}
+
+@media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+}
+
+.title-bullet {
+    color: #000;
+    font-size: 24px;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    font-family: 'UTMAlterGothic', "Times New Roman";
+}
+
+.title-bullet h1 {    
+    color: #000;
+    font-size: 24px;
+    position: relative;
+    z-index: 22;
+    background-color: #ededed;
+    padding-left: 5px;
+    display: inline;
+    text-transform: uppercase;
+    font-family: 'UTMAlterGothic', "Times New Roman";
+}
+
+.title-bullet hr {    
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: -10%;    
+}
+
+#panel-left {
+    background-color: #ededed;
+}
+
+#panel-left, #panel-right {
+    padding-top: 15px;
+}
+
+#main-content h1 {
+    font-family: fantasy;
+}
+
+#main-content span, #main-content p {
+    font-family: cursive;
+}
+
+#panel-left #summary p, #panel-left #career p, #education p, #hobbies p, #references p {
+    color: #747474;
+    list-style: none;
+    font-size: 16px;
+    text-align: right;
+}
+
+#panel-left #career i {
+    color: #767372;
+    margin-right: 5px;
+    font-size: 10px;
+    position: relative;
+    bottom: 3px;
+}
+
+#skills p {
+    text-align: right;
+    font-size: 16px;
+    font-family: cursive;
+}
+
+#skills .progress {
+    float: right;
+    width: 80%;
+}
+
+.progress-bar {
+    background-color: #585b5d;    
+}
+
+#skills .one, #skills .two, #skills .three {
+    position: absolute;
+    margin-top: 0;
+    z-index: 1;
+    width: 2px;
+    border-radius: 25px;
+    background-color: white;
+    height: 20px;
+}
+
+#skills .one {
+    left: 40%;
+}
+
+#skills .two {
+    left: 60%;
+}
+
+#skills .three {
+    left: 80%;
+}
+
+#panel-right {
+    background: #5a5656; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#949090, #5a5656); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#949090, #5a5656); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#949090, #5a5656); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#949090, #5a5656); /* Standard syntax */
+    padding-bottom: 20px;
+}
+
+#panel-right span {
+    font-size: 15px; 
+    background-color: transparent;
+}
+
+#panel-right h1 {
+    background-color: #949090;
+}
+
+.block-experience {
+    border-left: 2px solid white;
+    margin-left: 5px;
+    padding-bottom: 15px;
+}
+
+.block-experience h4, h3 {
+    color: white;
+} 
+
+.block-experience-content {
+    white-space: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.block-experience-content i {
+    color: #b6b3b2;
+    margin-right: 5px;
+    font-size: 10px;
+    position: relative;
+    bottom: 3px;
+}
+
+#panel-right .company-name{
+    margin-bottom: 6px;
+}
+
+#panel-right .company-name span{
+    font-size: 20px;
+}
+
+#panel-right .company-title{
+    margin-bottom: 6px;
+}
+
+#panel-right .company-title span {
+    font-size: 16px;
+}
+
+#panel-right .company-name span, #panel-right .company-title span, #panel-right .time-period {
+    color: #e7ca65;    
+}

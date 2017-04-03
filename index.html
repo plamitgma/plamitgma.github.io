@@ -1,20 +1,379 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Lam Phan</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/combined.css">
+
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+    <title>Phan Phuoc Lam</title>
 </head>
 
-<body ng-app="main">
-    <div ng-include src="'src/views/common/header.html'"></div>
-    <div class="container" ng-view></div>
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-xs-2">
+                <img src="./images/LamPhan.JPG" alt="" style="width: 150px; height: 150px; border-radius: 50%;">
+            </div>
+            <div class="col-xs-5">
+                <h2>
+                    LAM PHAN PHUOC
+                </h2>
+                <h4>
+                    Senior Front End Developer
+                </h4>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-group">
+                    <i class="fa fa-home icon-header" aria-hidden="true"></i>
+                    <label>Tan Huong, Tan Phu, Ho Chi Minh</label>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-phone icon-header" aria-hidden="true"></i>
+                    <label>0909 02 36 97</label>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-envelope icon-header" aria-hidden="true"></i>
+                    <label>plamitgma@gmail.com</label>
+                </div>
+            </div>
+        </div>
+        <div id="main-content" class="row">
+            <div id="panel-left" class="col-xs-5" style=" padding-left: 0">
+                <div class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Summary</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="summary" class="col-xs-12">
+                        <p>With near 7 years experience on development software, I developed many diversified projects with many technologies such as C#, .NET MVC, Angular JS, JQuery, Node JS, Bootstrap, Kendo UI, LESS, SASS, Mocha, Gulp, Webpack...</p>
+                        <p>My current project is built single page application use Angular JS, Node JS, Bootstrap, LESS, Gulp. And also write unit test use: Mocha, karma, sinon...</p>
+                        <p>My hobbies are include: play football, badminton, swimming, research and learn new technologies, especially JS Framework like ReactJS.</p>
+                        <p>I am very friendly, enthusiastic and high spirit, I can work well with everyone and work under pressure.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Career Objective</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="career" class="col-xs-12">
+                        <p><i class="fa fa-circle"></i>Seeking a Senior Front end Developer position at the company utilizing creative mind and superb skills in developing applications by means of the most modern of development tools</p>
+                        <p><i class="fa fa-circle"></i>Seeking for a Senior Front end Developer position with the company where I may be able to use well-honed skills in planning, coding and testing in order to develop state-of-the-art software solutions
+                            for the company’s clientele</p>
+                        <p><i class="fa fa-circle"></i>To obtain a Senior Front End Developer position with company using my expertise in program development based on customer demands</p>
+                        <p><i class="fa fa-circle"></i>To pursue a successful career in software development at the company. Offering excellence in object oriented languages in order to develop above-par software applications and underlying systems</p>
+                        <p><i class="fa fa-circle"></i>To obtain a position of Senior Software Developer at company where I may be able to employ my skills in developing specified software applications in order to meet customers’ specifications</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Skills</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                    <div id="career" class="col-xs-12">
+                        <p><i class="fa fa-circle"></i>AngularJS, Node Js, Bootstrap, .NET, KendoUI, JQuery, LESS, SASS, CSS3, HTML5...</p>
+                        <p><i class="fa fa-circle"></i>Security on client side: JWT, XSS, CORS, CSRF</p>
+                        <p><i class="fa fa-circle"></i>Unit test ( .NET and JS - Mocha, Sinon, Karma)</p>
+                        <p><i class="fa fa-circle"></i>Design Pattern, SOLID, DRY, KISS principles.</p>
+                        <p><i class="fa fa-circle"></i>Single Page Application.</p>
+                        <p><i class="fa fa-circle"></i>Agile, continuous integration and delivery.</p>
+                    </div>
+                </div>
+                <div id="education" class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Education</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <p>Science of University</p>
+                                <p>Degree: Bachelor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hobbies" class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Hobbies</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <p>Footbal</p>
+                                <p>Badmiton</p>
+                                <p>Watch Movies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="references" class="row">
+                    <div class="col-xs-12 title-bullet" style="text-align: right;">
+                        <h1 class=""><strong>Reference</strong></h1>
+                        <hr style="background-color: #000; padding-left: 0">
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <p style="font-size: 18px"><strong>Lam Nguyen</strong></p>
+                                <p>Development Director</p>
+                                <p>lam.nguyen@identifix.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="panel-right" class="col-xs-7" style=" padding-right: 0;">
+                <div class="row title-bullet" style="text-align: left;">
+                    <div class="col-xs-12">
+                        <h1>experience</h1>
+                        <hr style="color: white;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <i class="fa fa-circle" style="color: white"></i>
+                                    <span class="label label-default time-period">10/2014 - now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 block-experience">
+                                <div class="col-xs-12">
+                                    <div class="row company-name">
+                                        <span class="label label-default">Identifix</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Sennior Front End Developer</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Project: Shop Management System</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class=" block-experience-content">
+										  Identifix, Inc., an industry leader in vehicle diagnostics and repair for over 25 years, allow shop management system (SMS) providers to integrate Direct-Hit, Identifix’s award-winning online tool, within their systems. This enhancement will benefit SMS users, who are also Direct-Hit subscribers, giving them access to Direct-Hit’s proven short-cut test and confirmed fix information, along with genuine OEM repair information, routine maintenance schedules and other vehicle information from within their SMS.
+										  <p><strong>Help the shop improve productivity with increased automation</strong></p>
+										  <p><i class="fa fa-circle"></i>  Generate professional, easy-to-read estimates, repair orders, and invoices</p>
+										  <p><i class="fa fa-circle"></i>  Eliminate manual bookkeeping and reduce paper-based workflows with one system to accurately track
+											  customers and vehicle histories</p>
+										  <p><i class="fa fa-circle" ></i>  Streamline customer/vehicle check-in process with an intuitive point-click interface</p>
+										  <p><strong>Increase profitability with better tracking and reporting</strong></p>
+										  <p><i class="fa fa-circle"></i>  Automate core shop functions to minimize data entry errors</p>
+										  <p><i class="fa fa-circle"></i>  Utilize editable tax tables</p>
+										  <p><i class="fa fa-circle"></i>  Produce reports that can be used for shop accounting or record keeping</p>
+									  </span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class="block-experience-content">
+										  <strong>Skills: AngularJS, Bootstrap, NodeJS, Gulp, Mocha, Karma, Chai, Sinon.</strong>
+									  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <i class="fa fa-circle" style="color: white"></i>
+                                    <span class="label label-default time-period">10/2013 - 10/2014</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 block-experience">
+                                <div class="col-xs-12">
+                                    <div class="row company-name">
+                                        <span class="label label-default">HarveyNash</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Software Developer</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Project: Civica Housing</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class=" block-experience-content">
+										  The Civica Housing Cx project include the development of a number of modules to provide a complete solution for the marketplace. The main objective will be as below:
+											<p><i class="fa fa-circle"></i>  Provide a comprehensive package to meet the changing requirements for RPs</p>  
+											<p><i class="fa fa-circle"></i>  Deal with multiple and various resources</p>
+											<p><i class="fa fa-circle"></i>  Future proof application and awards</p>
+											<p><i class="fa fa-circle"></i>  Incorporate different waiting lists</p>
+											<p><i class="fa fa-circle"></i>  Manage non asset based resources</p>
+											<p><i class="fa fa-circle"></i> Support customer access (web)</p>
+									  </span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class="block-experience-content">
+										  <strong>Skills: .NET MVC, JQuery, KendoUI, MS SQL, NHibernate</strong>
+									  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <i class="fa fa-circle" style="color: white"></i>
+                                    <span class="label label-default time-period">07/2012 - 10/2013</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 block-experience">
+                                <div class="col-xs-12">
+                                    <div class="row company-name">
+                                        <span class="label label-default">VnResource</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Team Leader</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Project: Education Bussiness Management System</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class=" block-experience-content">
+										  EBM is system manage all bussiness in the education. The main objective will be as below:
+										  <p><i class="fa fa-circle"></i>  Manage student: student information, history of student, action of student, student’s relationship, student’s certificate, etc.</p>
+										  <p><i class="fa fa-circle"></i>  Manage class: class information, student list, cancel lesson, make up lesson, student’s mark management.</p>
+										  <p><i class="fa fa-circle"></i>  Manage teacher: Check teacher available, manage teaching hour,  calculate salary of teacher base on teaching hour.</p>
+										  <p><i class="fa fa-circle"></i>  Manage room: Check room available.</p>
+										  <p><i class="fa fa-circle"></i>  Manage tuition fee of student, attendance of student in class, etc.</p>
+										  <p><i class="fa fa-circle"></i>  Manage imaginary, settle.</p>
+										  <p><i class="fa fa-circle"></i>  Manage promotion campaign.</p>
+										  <p><i class="fa fa-circle"></i>  Email Management System.</p>
+										  <p><i class="fa fa-circle"></i>  Automatic SMS System.</p>
+										  <p><i class="fa fa-circle"></i>  Manage commission of Customer service officer.</p>
+										  <p><i class="fa fa-circle"></i>  Report System: payment, imaginary, settle, monthly turnover, carry forward, ect</p>
+									  </span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class="block-experience-content">
+										  <strong>Skills: .NET MVC, NHibernate, MS SQL</strong>
+									  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <i class="fa fa-circle" style="color: white"></i>
+                                    <span class="label label-default time-period">06/2011 - 07/2012</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 block-experience">
+                                <div class="col-xs-12">
+                                    <div class="row company-name">
+                                        <span class="label label-default">VnResource</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Software Developer</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Project: Thien Hoa Electronics & Furniture Shopping Center.</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class=" block-experience-content">
+										 <p>
+											 Provide all functions of supermarket operation: purchase, sale, payment, warehouse management, supplier management, customer management, promotion management, warranty and maintenance service, financial accounting, payroll timekeeper, etc.</p>
+										  <p>
+											  The system supporting the specific process of furniture supermarket, electronics manufacturer sectors, etc.; sale process, orders with discount and delivery orders approval process, etc; logictics assignment process, purchase process, maintenance service process, etc.
+										  </p>
+
+									  </span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class="block-experience-content">
+										  <strong>Skills: .NET MVC, Entity Framework, MS SQL</strong>
+									  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <i class="fa fa-circle" style="color: white"></i>
+                                    <span class="label label-default time-period">05/2010 - 06/2011</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-12 block-experience">
+                                <div class="col-xs-12">
+                                    <div class="row company-name">
+                                        <span class="label label-default">VnResource</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Software Developer</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row company-title">
+                                        <span class="label label-default">Project: Task Management System</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class=" block-experience-content">
+										  <p><i class="fa fa-circle"></i>  Manage project: project information, put member into project.</p>
+										  <p><i class="fa fa-circle"></i>  Manage plan and assign task’s employees in project.</p>
+										  <p><i class="fa fa-circle"></i>  Send email message when create task or assign for any one.</p>
+										  <p><i class="fa fa-circle"></i>  Report by personal or project.</p>
+										  <p><i class="fa fa-circle"></i>  Manage cost of project.</p>
+									  </span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <span class="block-experience-content">
+										  <strong>Skills: .NET MVC, Entity Framework, MS SQL</strong>
+									  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="scripts/app.lib.js"></script>
 
-<script src="scripts/app.main.js"></script>
-
-<script src="scripts/templates.min.js"></script>
 </html>
